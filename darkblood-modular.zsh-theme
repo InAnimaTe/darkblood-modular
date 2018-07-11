@@ -1,15 +1,15 @@
 ###
 # darkblood_modular - A new take on an excellent theme. Easy to make functions
-# enabling addition of cool features and functionality. 
+# enabling addition of cool features and functionality.
 ###
 
 ##### Prefix, suffix vars
 #
 # Colors are defined here and hopefully, only here (not the case).
 # ...One day.
-PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
-SUFFIX="%{$reset_color%}%{$fg[red]%}]"
-CLEAN="%{$reset_color%}"
+THEME_PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
+THEME_SUFFIX="%{$reset_color%}%{$fg[red]%}]"
+THEME_CLEAN="%{$reset_color%}"
 
 #####
 ## The starting statements.
@@ -34,12 +34,12 @@ final(){
 base(){
     ## A wrapper for each function below that will be its own entity with [] and proper coloring.
     ## Takes in the function to call and an option to not suffix with a space. useful for the pointy arrow/final character.
-    echo -n "$PREFIX"
+    echo -n "$THEME_PREFIX"
     $1
     if [[ "$2" == "nospace" ]]; then
-        echo -n "$SUFFIX"
+        echo -n "$THEME_SUFFIX"
     else
-        echo -n "$SUFFIX "
+        echo -n "$THEME_SUFFIX "
     fi
     ## probably don't want to use this for the pointy arrow or whatever final character/func is printed.
 }
@@ -130,6 +130,6 @@ $(build_secondline_prompt)'
 #####
 ### Dont worry about the stuff below...its for git stuff.
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%{$fg[red]%}] "
+ZSH_THEME_GIT_PROMPT_THEME_PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
+ZSH_THEME_GIT_PROMPT_THEME_SUFFIX="%{$reset_color%}%{$fg[red]%}] "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}⚡%{$reset_color%}"
