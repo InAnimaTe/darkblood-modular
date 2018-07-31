@@ -51,11 +51,7 @@ username_and_host(){
 
 git_stuffs(){
     ## Enter our git prompt
-    if [[ "$(uname)" != "Darwin" ]]; then
-        if [[ $(stat -L --file-system --format=%T .) != "nfs" ]]; then
-            echo -n "%{$(git_prompt_info)%}%(?,,%{$fg[red]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[red]%}])"
-        fi
-    fi
+    echo -n "%{$(git_prompt_info)%}%(?,,%{$fg[red]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[red]%}])"
 }
 
 directory_loc(){
