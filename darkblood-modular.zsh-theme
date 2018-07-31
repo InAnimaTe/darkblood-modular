@@ -130,6 +130,6 @@ $(build_secondline_prompt)'
 #####
 ### Dont worry about the stuff below...its for git stuff.
 
-ZSH_THEME_GIT_PROMPT_THEME_PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
-ZSH_THEME_GIT_PROMPT_THEME_SUFFIX="%{$reset_color%}%{$fg[red]%}] "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[%{$fg_bold[white]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%{$fg[red]%}] "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}⚡%{$reset_color%}"
