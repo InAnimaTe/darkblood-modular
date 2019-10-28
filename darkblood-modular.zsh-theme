@@ -70,6 +70,11 @@ cur_date_time(){
     echo -n "%* on %W"
 }
 
+epoch_plz(){
+    ## Displays the epoch time
+    echo -n "%D{%s}"
+}
+
 cur_fs(){
     ## Informs us of the filesystem we are on, useful when on nfs shares
     if [[ "$(uname)" != "Darwin" ]]; then
@@ -98,6 +103,7 @@ build_firstline_prompt(){
        base in_screen
     fi
     git_stuffs
+    base epoch_plz
 }
 
 build_secondline_prompt(){
